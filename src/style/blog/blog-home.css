@@ -1,0 +1,598 @@
+:root {
+  --primary-color: #00cd70;
+  --secondary-color: #00a050;
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #888888;
+  --background-light: #ffffff;
+  --background-grey: #f9f9f9;
+  --border-light: #e6e7e8;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.1);
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 0.75rem;   /* 12px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2.5rem;    /* 40px */
+  --font-small: 0.875rem;  /* 14px */
+  --font-primary: 1rem;    /* 16px */
+  --font-medium: 1.125rem; /* 18px */
+  --font-large: 1.5rem;    /* 24px */
+  --font-xl: 2.25rem;    /* 36px */
+  /* Fuentes (Asegúrate de importarlas, ej. Google Fonts) */
+  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif; /* O tu fuente para títulos */
+  --header-height: 70px; /* DEFINE AQUÍ LA ALTURA DE TU HEADER */
+  --primary-color: #00cd70;
+}
+
+.blog-header-hero {
+  position: relative; /* Para posicionar elementos hijos absolutamente */
+  min-height: 45vh; /* O una altura fija como 400px, 500px, etc. */
+  width: 100%; /* Ocupa todo el ancho de la ventana gráfica */
+  background-image: url('https://res.cloudinary.com/destinoplus/image/upload/v1733787476/restaurantes/zfikrmhjh6e0hizcth2o.jpg'); /* CAMBIA ESTA IMAGEN */
+  background-size: cover; /* Cubre todo el espacio disponible */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  display: flex; /* Para centrar el contenido interno vertical y horizontalmente */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Color de texto por defecto para el contenido del hero */
+  padding: var(--spacing-xl, 2.5rem) var(--spacing-md, 1rem); /* Padding interno */
+  box-sizing: border-box; /* Importante si usas width: 100vw y padding */
+}
+
+.blog-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.349); /* Negro con 50% de opacidad */
+  z-index: 1; /* Detrás del contenido, encima de la imagen de fondo */
+}
+
+.blog-header-content {
+  position: relative; /* Para que esté por encima del overlay */
+  z-index: 2;
+  max-width: 700px; /* Limita el ancho del texto para mejor lectura */
+  padding: var(--spacing-lg); /* Espacio alrededor del texto */
+}
+
+
+/* --- Estilos Generales del Blog --- */
+.blog-page-container {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrado */
+  padding-top: 3%;
+  padding-left: 5%; /* Padding lateral */
+  padding-right: 5%; /* Padding lateral */
+  padding-bottom: var(--spacing-lg, 1.5rem); /* Padding inferior */
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  background-color: var(--background-light, #ffffff); /* Fondo por defecto */
+  overflow-x: hidden;
+}
+
+/* --- Cabecera del Blog --- */
+.blog-header {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-xl, 2.5rem) * 1.5);
+  padding: var(--spacing-lg, 1.5rem) 0;
+}
+
+.blog-title {
+  font-size: clamp(var(--font-large), 6vw, var(--font-xl) * 1.8); /* Tamaño de fuente responsive */
+  color: white; /* Asegura que el título sea blanco */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+  margin-bottom: var(--spacing-md, 1rem);
+  line-height: 1.1;
+  padding: 0 15%;
+}
+
+.highlight-plus {
+  color: var(--primary-color, #00cd70);
+  font-weight: 800; /* O el peso que uses para el 'plus' */
+}
+
+.blog-subtitle {
+  font-size: clamp(var(--font-primary), 3vw, var(--font-medium) * 1.2); /* Tamaño responsive */
+  color: rgba(255, 255, 255, 0.9); /* Blanco con ligera transparencia */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0; /* Quitar si no hay más elementos abajo como un buscador */
+  line-height: 1.6;
+}
+
+.blog-header-search {
+  margin-top: var(--spacing-lg, 1.5rem);
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm, 0.75rem);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-header-search input[type="text"] {
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: var(--font-primary, 1rem);
+  flex-grow: 1;
+}
+.blog-header-search input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.blog-header-search button {
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
+  background-color: var(--primary-color, #00cd70);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.blog-header-search button:hover {
+  background-color: var(--secondary-color, #00a050);
+}
+
+.section-title-article {
+  text-align: center;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: var(--font-large, 1.5rem);
+  font-weight: 600;
+  color: var(--text-dark, #333);
+  margin-top: 4%;
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  position: relative;
+  padding-bottom: var(--spacing-sm, 0.75rem);
+}
+/* Línea decorativa opcional */
+.section-title-article::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Ancho de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: var(--primary-color, #00cd70);
+    border-radius: 2px;
+}
+
+/* --- Sección Explorar por Categoría --- */
+.category-highlight-section {
+  margin-bottom: var(--spacing-xl, 2.5rem);
+}
+
+.category-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto (móvil) */
+  gap: var(--spacing-lg, 1.5rem);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de Categoría Visual */
+.category-highlight-card {
+  position: relative;
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  aspect-ratio: 1 / 1; /* Cuadrado */
+  box-shadow: var(--shadow-medium, 0 6px 15px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--background-grey, #f9f9f9); /* Fondo placeholder */
+}
+.category-highlight-card:hover {
+  transform: scale(1.04) translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.category-highlight-image {
+  position: absolute;
+  inset: 0; /* Equivalente a top, right, bottom, left = 0 */
+}
+.category-highlight-image img { /* Estilo para la imagen dentro de CldImage */
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que cubra */
+}
+.category-highlight-card:hover .category-highlight-image img {
+   transform: scale(1.1);
+}
+
+.category-highlight-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+  border-radius: inherit; /* Hereda el borde redondeado */
+}
+.category-highlight-card:hover .category-highlight-overlay {
+   background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+}
+
+.category-highlight-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: var(--spacing-sm, 0.75rem);
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.category-highlight-card:hover .category-highlight-content {
+    transform: translate(-50%, -55%); /* Sube un poco */
+}
+
+.category-highlight-content i {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--spacing-md, 1rem);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-highlight-content h4 {
+  font-size: var(--font-medium, 1.125rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7); /* Sombra más fuerte para legibilidad */
+}
+
+/* --- Sección Últimos Artículos --- */
+.recent-articles-section {
+   margin-bottom: var(--spacing-xl, 2.5rem);
+}
+
+/* Grid para artículos recientes */
+.article-grid { /* Estilo base del grid, usado también por recent-articles-grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg, 1.5rem);
+}
+.recent-articles-grid {
+    max-width: 1200px; /* O el ancho completo si prefieres */
+    margin: 0 auto;
+    /* Puedes sobreescribir columnas si es necesario */
+}
+
+
+/* Estilos para Tarjeta de Artículo Estándar (ArticleCard) */
+.article-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius-lg, 16px); /* Para que el hover de sombra se vea bien */
+  height: 100%; /* Asegura que el link ocupe toda la altura del grid item */
+}
+.article-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium, 0 6px 15px rgba(0, 0, 0, 0.1));
+}
+
+.article-card {
+  background-color: var(--background-light, #ffffff);
+  border-radius: var(--radius-lg, 16px);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft, 0 4px 8px rgba(0, 0, 0, 0.06));
+  border: 1px solid var(--border-light, #e6e7e8);
+  height: 100%; /* Ocupa toda la altura del link */
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10; /* Ratio común para imágenes de blog */
+  overflow: hidden;
+}
+.article-card-image { /* Clase para la img dentro de CldImage si es necesario */
+  transition: transform 0.4s ease;
+}
+.article-card-link:hover .article-card-image {
+  transform: scale(1.05);
+}
+
+.article-card-category {
+  position: absolute;
+  top: var(--spacing-md, 1rem);
+  left: var(--spacing-md, 1rem);
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: var(--spacing-xs, 0.5rem) var(--spacing-sm, 0.75rem);
+  border-radius: var(--radius-sm, 4px);
+  font-size: var(--font-small, 0.875rem);
+  font-weight: 600;
+  z-index: 2;
+  line-height: 1; /* Ajuste fino */
+}
+
+.article-card-content {
+  padding: var(--spacing-lg, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa espacio restante */
+}
+
+.article-card-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: var(--font-medium, 1.125rem);
+  font-weight: 600;
+  color: var(--text-dark, #333);
+  margin: 0 0 var(--spacing-sm, 0.75rem) 0; /* Ajuste margen inferior */
+  line-height: 1.4;
+  /* Limitar a 2 líneas con elipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: calc(1.4em * 2); /* Asegura espacio para 2 líneas */
+}
+
+.article-card-excerpt {
+  font-size: var(--font-primary, 1rem);
+  color: var(--text-medium, #666);
+  line-height: 1.6;
+  margin: 0; /* Quitamos margen inferior, el contenedor padre da espacio */
+  flex-grow: 1;
+  /* Limitar a 3 líneas con elipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Botón "Ver Todos los Artículos" --- */
+.view-all-button-container {
+    text-align: center;
+    margin-top: var(--spacing-xl, 2.5rem);
+}
+
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm, 0.75rem);
+    background: var(--primary-color, #00cd70);
+    color: white;
+    border: none;
+    border-radius: 50px; /* Píldora muy redondeada */
+    padding: calc(var(--spacing-sm, 0.75rem) + 2px) var(--spacing-lg, 1.5rem); /* Ajuste padding */
+    font-size: var(--font-primary, 1rem);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 205, 112, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.8px; /* Un poco más de espacio */
+}
+.view-all-btn:hover {
+    background: var(--secondary-color, #00a050);
+    box-shadow: 0 6px 16px rgba(0, 205, 112, 0.4);
+    transform: translateY(-2px);
+}
+.view-all-btn i {
+    transition: transform 0.3s ease;
+    font-size: 0.9em; /* Icono ligeramente más pequeño */
+}
+.view-all-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* --- Mensaje si no hay artículos --- */
+.no-articles-message {
+  text-align: center;
+  padding: var(--spacing-xl, 2.5rem) var(--spacing-lg, 1.5rem);
+  background-color: var(--background-grey, #f9f9f9);
+  border-radius: var(--radius-md, 8px);
+  color: var(--text-medium, #666);
+  border: 1px dashed var(--border-light, #e6e7e8);
+  margin: var(--spacing-lg, 1.5rem) auto;
+}
+
+
+/* --- Ajustes Responsivos --- */
+@media (min-width: 768px) {
+    /* 4 columnas para las categorías en pantallas medianas/grandes */
+    .category-highlight-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+     /* Ajustar grid de recientes si se quiere limitar */
+    .recent-articles-grid {
+       /* Ejemplo: Limitar a 3 columnas en desktop */
+       /* grid-template-columns: repeat(3, 1fr); */
+    }
+}
+
+.site-footer {
+  background-color: #222; /* Gris oscuro de fondo */
+  color: var(--text-light, #bbb); /* Color de texto claro por defecto */
+  padding: var(--spacing-xl, 2.5rem) 0 var(--spacing-md, 1rem); /* Padding arriba/abajo, sin padding lateral aquí */
+  font-size: var(--font-small, 0.875rem);
+  line-height: 1.7;
+}
+
+.footer-content-container {
+  width: 100%;
+  max-width: 1200px; /* Coincide con tu .blog-page-container */
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg, 1.5rem); /* Padding lateral para el contenido interno */
+  box-sizing: border-box;
+}
+
+/* Sección promocional opcional en el footer */
+.footer-promo-section {
+  text-align: center;
+  padding: var(--spacing-lg, 1.5rem) var(--spacing-md, 1rem);
+  background-color: rgba(255, 255, 255, 0.05); /* Un fondo sutilmente diferente */
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: var(--spacing-xl, 2.5rem);
+}
+
+.footer-promo-section h2 {
+  font-size: var(--font-large, 1.5rem);
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm, 0.75rem);
+  font-weight: 600;
+}
+
+.footer-promo-section p {
+  color: var(--text-light, #bbb);
+  margin-bottom: var(--spacing-md, 1rem);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo-button {
+  display: inline-block;
+  background-color: var(--primary-color, #00cd70);
+  color: white;
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-lg, 1.5rem);
+  border-radius: 50px; /* Píldora */
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.promo-button:hover {
+  background-color: var(--secondary-color, #00a050);
+  transform: translateY(-2px);
+}
+
+
+/* Contenedor principal del footer (columnas) */
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas responsivas */
+  gap: var(--spacing-lg, 1.5rem);
+  padding-bottom: var(--spacing-lg, 1.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+}
+
+.footer-column h5 {
+  font-size: var(--font-primary, 1rem); /* Un poco más grande que el texto normal del footer */
+  color: #fff; /* Blanco para los títulos de columna */
+  margin-bottom: var(--spacing-md, 1rem);
+  font-weight: 600;
+}
+
+.footer-logo {
+  font-size: var(--font-large, 1.5rem); /* Tamaño del logo */
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--spacing-sm, 0.75rem);
+}
+
+.footer-logo .highlight-plus {
+  color: var(--primary-color, #00cd70);
+}
+
+.footer-about p {
+  margin-bottom: var(--spacing-sm, 0.75rem);
+  max-width: 280px; /* Para que no sea demasiado ancho */
+}
+
+.footer-links ul, .footer-legal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li, .footer-legal li {
+  margin-bottom: var(--spacing-xs, 0.5rem);
+}
+
+.footer-links a, .footer-legal a {
+  color: var(--text-light, #bbb);
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+  color: var(--primary-color, #00cd70);
+  padding-left: 4px; /* Pequeño efecto al pasar el mouse */
+}
+
+/* Redes Sociales */
+.social-icons a {
+  color: var(--text-light, #bbb);
+  font-size: 1.5rem; /* Tamaño de los iconos */
+  margin-right: var(--spacing-md, 1rem);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Para que transform funcione */
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color, #00cd70);
+  transform: scale(1.1);
+}
+
+/* Parte inferior del footer (copyright) */
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-md, 1rem);
+}
+
+.footer-bottom p {
+  margin: var(--spacing-xs, 0.5rem) 0;
+  font-size: 0.8rem; /* Un poco más pequeño */
+  color: #999; /* Un gris más suave para el copyright */
+}
+
+.footer-bottom .fa-heart {
+  margin: 0 3px;
+}
+
+
+/* --- Ajustes Responsivos para el Footer --- */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta minmax para móviles */
+    gap: var(--spacing-md, 1rem);
+  }
+
+  .footer-promo-section h2 {
+    font-size: calc(var(--font-large, 1.5rem) * 0.9);
+  }
+
+  .footer-column {
+    margin-bottom: var(--spacing-md, 1rem); /* Espacio entre columnas apiladas */
+  }
+  .footer-about, .footer-social {
+    text-align: center; /* Centrar el contenido de "about" y "social" en móvil */
+  }
+  .footer-about p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-icons {
+    justify-content: center; /* Centrar iconos si son flex */
+  }
+}

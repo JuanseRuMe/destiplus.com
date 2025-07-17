@@ -1,0 +1,15 @@
+@import url('./actividades/actividades.css');
+@import url('./alojamiento/alojamiento.css');
+@import url('./carga-error/carga.css');
+@import url('./events/batalla.css');
+@import url('./destino-home/destino.css');
+@import url('./destino-home/impactoAmbiental.css');
+@import url('./destino-home/index.css');
+@import url('./restaurante-bares/establecimientos.css');
+@import url('./rutas/descripcionRuta.css');
+@import url('./rutas/listadoRutas.css');
+@import url('./rutas/mapaUbicacion.css');
+@import url('./destino-home/ads.css');
+@import url('./blog/blog-home.css');
+@import url('./blog/blog-individual.css');
+@import url('./politicas-terminos/politicas-terminos.css')

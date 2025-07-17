@@ -1,0 +1,375 @@
+:root {
+    --primary-color: #00cd70;
+    --secondary-color: #00b894;
+    --font-primary: 14px;
+    --font-large: 24px;
+    --font-medium: 18px;
+    --font-small: 12px;
+    --opacity-high: 1;
+    --opacity-medium: 0.8;
+    --opacity-low: 0.6;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 50px;
+    --shadow-soft: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-medium: 0 4px 12px rgba(0,205,112,0.2);
+  }
+  
+  /* Contenedor principal */
+  .actividades-container {
+    padding: 20px 7%;
+  }
+  
+  .actividades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  /* Card de actividad */
+  .actividad-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Contenedor de imagen */
+  .image-container {
+    position: relative;
+    padding-top: 66.67%;
+    background: #f5f5f5;
+  }
+  
+  .activity-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Badge de nuevo y favoritos */
+  .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(4px);
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  /* Logo y título */
+  .logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .actividad-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .activity-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+  }
+  .header-container {
+    display: flex;
+    padding: 1% 1%;
+  }
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+}
+  /* Rating */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .star-icon {
+    color: #FFB800;
+    fill: currentColor;
+  }
+  
+  /* Participantes */
+  .participants-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .participants-info span {
+    font-size: 14px;
+  }
+  
+  .profile-circles {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #e0e0e0;
+  }
+  
+  .profile-circle:nth-child(2) {
+    margin-left: -8px;
+  }
+  
+  /* Precio y botón */
+  .price-booking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    border-top: 1px solid #eee;
+    padding-top: 3%;
+  }
+  
+  .price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+  
+  .amount {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  .per-person {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .book-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,205,112,0.3);
+  }
+  
+  /* Características adicionales */
+  .container-caracteristicas-actividad {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-container-actividad {
+    width: 85%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(250, 247, 247, 0.103);
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .actividades-container {
+      padding: 16px 5%;
+    }
+  
+    .actividades-grid {
+      gap: 16px;
+    }
+  
+    .activity-title {
+      font-size: 16px;
+    }
+  
+    .book-btn {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+  }
+
+  /*  Seccopm precio, metodo de pago */
+.container-principal-precio-metodo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.container-principal-precio-metodo-es {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.container-precio-metodo-pago {
+    width: 85%;
+    height: 10vh;
+    display: flex;
+    border-radius: 1em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075); /* Sombra ajustada */
+    border: 1px solid rgba(250, 247, 247, 0.103);
+}
+.container-precio {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-precio h5 {
+    font-size: 24px;
+}
+.container-precio p {
+    font-size: 14px;
+    opacity: 0.6;
+}
+.container-metodo {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2%;
+}
+.container-metodo p {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.container-individual .fa-grip-fire {
+  color: #FF6B6B; /* Un rojo suave para dificultad */
+}
+
+.container-individual .fa-clock {
+  color: var(--primary-color); /* Color primario para duración */
+}
+
+.container-individual .fa-person {
+  color: #4A90E2; /* Azul para capacidad */
+}
+
+.separador-res {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 1px;
+  background-color: rgba(105, 105, 105, 0.2);
+}
+.calendar-icon {
+  color: var(--primary-color);
+  margin-left: 3%;
+}
+
+/* Destok home*/
+@media (min-width: 768px) {
+  .container-actividades-div {
+    display: flex;
+  }
+  .sub-container {
+    height: 80%;
+  }
+  .container-principal-precio-metodo {
+      margin-bottom: 3%;
+      margin-top: 3%;
+  }
+  .container-logo-nombre-caracteristicas {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .separador {
+    display: none;
+  }
+
+  /* Metods de pago */
+  .container-precio-metodo-pago {
+    width: 70%;
+  }
+  .promo-tag {
+    left: 15%;
+  }
+  .container-principal-precio-metodo-es {
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+
+}

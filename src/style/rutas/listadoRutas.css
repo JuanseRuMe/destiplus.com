@@ -1,0 +1,399 @@
+.rutas-container {
+  padding: 20px 7%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Seccion de los filtros */
+.filters-container {
+    padding: 20px 7%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 24px;
+}
+
+.filters-header {
+  margin-bottom: 10px;
+}
+
+.filters-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.filters-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.filters-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+.filter-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filter-category h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.filter-icon {
+  color: #00cd70;
+}
+
+.filter-options {
+  height: 40px;
+  margin-bottom: 1%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 5px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  
+  &::-webkit-scrollbar {
+      height: 4px;
+  }
+  
+  &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+  }
+  
+  overflow-y: hidden;
+}
+  
+.filter-button {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  min-width: min-content;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 12px;
+}
+
+.filter-options::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: linear-gradient(to right, transparent, white);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.filter-options:not(.scrollable)::after {
+    display: none;
+}
+  
+.filter-button:hover {
+  background: #e8e8e8;
+}
+
+.filter-button.selected {
+  background: #00cd70;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .filters-container {
+    padding: 16px 5%;
+  }
+
+  .filters-title h2 {
+    font-size: 20px;
+  }
+
+  .filters-logo {
+    height: 32px;
+  }
+
+  .filters-content {
+    gap: 16px;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+    max-width: 100%;
+  }
+
+  .filter-button {
+    padding: 0px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Animaciones */
+@keyframes filterAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-button {
+  animation: filterAppear 0.3s ease;
+}
+
+.filter-button.selected {
+  animation: none;
+}
+
+.filter-button:focus {
+  outline: 2px solid #00cd70;
+  outline-offset: 2px;
+}
+
+.filter-button:active {
+  transform: scale(0.95);
+}
+
+/* Sección de rutas individuales */
+.container-seccion-lista-rutas {
+    width: 100%;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 24px;
+}
+
+.container-item-lista-rutas {
+  position: relative;
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.container-img-ruta {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-info-ruta {
+  padding: 24px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título de la ruta */
+.route-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Estadísticas de la ruta */
+.route-stats {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 12px;
+}
+
+.icon2 {
+    color: #00cd70;
+}
+
+/* Calificación */
+.rating-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 174px;
+  background: #00cd70;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Botones sociales */
+.route-social {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.route-social button {
+    background: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.route-social button:hover {
+    transform: scale(1.1);
+    background-color: #f5f5f5;
+}
+
+/* Footer de la ruta */
+.route-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.user-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+.user-count span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e0e0e0; /* Color por defecto para avatares sin imagen */
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.route-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.ver-ruta-btn {
+    background: #00cd70;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ver-ruta-btn:hover {
+    background: #00b563;
+}
+
+
+/* Estilos para el grupo de avatares (asegura que sea flex) */
+.avatar-group {
+  display: flex;
+  align-items: center;
+  padding-left: 8px; /* Compensa el margen negativo del primer avatar si es necesario */
+}
+
+/* Estilo para CADA contenedor de avatar */
+.avatar {
+  width: 32px;      /* Fuerza el ancho del contenedor */
+  height: 32px;     /* Fuerza el alto del contenedor */
+  border-radius: 50%; /* ¡Esto lo hace redondo! */
+  overflow: hidden;   /* Esconde las esquinas de la imagen interior */
+  position: relative; /* Contexto para posicionar la imagen si fuera necesario */
+  border: 2px solid white; /* Borde blanco opcional para separación */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Sombra sutil opcional */
+  background-color: #e0e0e0; /* Color de fondo mientras carga o si falla */
+  flex-shrink: 0; /* Evita que se encojan en el flex layout */
+}
+
+/* Estilo para la imagen DENTRO de CldImage (asegura que llene el círculo) */
+/* A menudo no es estrictamente necesario si CldImage aplica position:absolute */
+.avatar .avatar-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el círculo sin distorsionarse */
+}
+
+/* Estilos opcionales para el placeholder */
+.avatar.placeholder {
+   /* Puedes añadir un icono de usuario genérico o mantener solo el fondo */
+   background-color: #f0f0f0;
+   border-color: #f5f5f5;
+}

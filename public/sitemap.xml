@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Home y sección clave -->
+  <url>
+    <loc>https://www.destiplus.com/</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/aventura-reserva-el-turpial-senderismo-suesca</loc>
+    <lastmod>2025-06-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/imperdibles-suesca-colombia-guia-completa</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/rutas-de-senderismo-en-suesca</loc>
+    <lastmod>2025-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/don-tonho-ahumados-sabor-suesca</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/cabana-con-jacuzzi-en-villa-ines</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/cabana-con-sauna-en-villa-ines</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/cabana-catamaran-villa-ines-suesca</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/hotel-casona-quesada-suesca-historia-leyenda</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/ruta-virgen-de-la-z-suesca</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/gonzalo-jimenez-quesada-suesca-refugio-conquistador</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/suesca-blog/rocas-de-suesca</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/impactoAmbiental</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página principal de destino Suesca -->
+  <url>
+    <loc>https://www.destiplus.com/destino/Suesca</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sección Parchar / Batalla -->
+  <url>
+    <loc>https://www.destiplus.com/destino/Suesca/parchar/batalla</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.destiplus.com/destino/Suesca/parchar/batalla/1</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Alojamiento en Suesca -->
+  <url>
+    <loc>https://www.destiplus.com/destino/Suesca/alojamiento</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Chalet%20con%20Jacuzzi</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Habitaci%C3%B3n%20Doble%20Deluxe</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Suite%20Casona</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Habitaci%C3%B3n%20Est%C3%A1ndar</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Habitaci%C3%B3n%20Familiar</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Caba%C3%B1a%20con%20Jacuzzi</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Domo</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Caba%C3%B1a%20Sencilla</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Caba%C3%B1a%20Catamaran</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/Modulo</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/alojamiento/El%20Refugio</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Actividades en Suesca -->
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades</loc><lastmod>2025-05-12</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Recorrido%20por%20el%20Ca%C3%B1%C3%B3n%20de%20las%20Lechuzas</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Reserva%20el%20Turpial</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Camping%20sobre%20las%20Rocas</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Escalada</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Cabalgata</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Escalada%20en%20Roca</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/actividades/Escalada%20en%20Suesca%20para%20todos</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Restaurantes y Bares -->
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes</loc><lastmod>2025-05-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/Nixcal</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/La%20Casona</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/Don%20To%C3%B1o%20Ahumados%20Artesanales</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/Texas%20Burger</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/Ricapizza%20Gourmet</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/restaurantes/Arca%20Rock</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/bares</loc><lastmod>2025-05-12</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+
+  <!-- Eventos y Rutas -->
+  <url><loc>https://www.destiplus.com/destino/Suesca/eventos</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas</loc><lastmod>2025-05-12</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Todas las rutas específicas -->
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Virgen%20de%20la%20Z</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Camino%20del%20Amor</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Mirador%20del%20Halc%C3%B3n</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Pictogramas</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/La%20Luci%C3%A9rnaga</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Ca%C3%B1%C3%B3n%20de%20la%20Lechuza</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Mirador%20El%20Pino</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/T%C3%BAnel%20del%20Agua</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Mirador%20de%20las%20Rocas</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Puente%20El%20Viaducto</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Ruta%20Patrimonial</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.destiplus.com/destino/Suesca/rutas/Quebrada%20la%20Susana</loc><lastmod>2025-05-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>

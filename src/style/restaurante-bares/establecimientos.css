@@ -1,0 +1,419 @@
+/*  Titulo, logo y calificacion del establecimiento */
+.container-logo-nombre-calificacion {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 5%;   
+    padding: 0% 5%;
+}
+.logo-establecimiento {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-establecimiento img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.nombre-establecimiento {
+    width: 70%;
+}
+.nombre-establecimiento h4 {
+    font-size: 28px;
+}
+.nombre-establecimiento p {
+    font-size: 14px;
+    opacity: 0.6;
+}
+.calificacion-establecimiento {
+    width: 10%;
+    display: flex;
+    align-items: first baseline;
+    justify-content: end;
+    padding-right: 4%;
+    margin-top: 2%;
+}
+.calificacion-establecimiento img {
+    width: 15px;
+    height: 15px;
+    padding-top: 2px;
+}
+.calificacion-establecimiento p {
+    font-size: 13px;
+    margin-right: 5%;
+}
+
+/*  Container caracteristicas */
+.container-caracteristicas {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8%;
+    margin-top: 4%;
+}
+.sub-container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    border-radius: 1em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075); /* Sombra ajustada */
+    border: 1px solid rgba(250, 247, 247, 0.103);
+}
+.container-individual {
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-individual div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-individual div h5 {
+    font-weight: 400;
+    margin-right: 5%;
+    opacity: 0.6;
+}
+
+.container-individual img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3%;
+}
+
+/* Container del concepto del establecimiento */
+.descripcion-establecimiento {
+    width: 100%;
+    height: auto;
+    padding: 0% 8%;
+    margin: 8% 0;
+
+}
+.descripcion-establecimiento p {
+    text-align: justify;
+    opacity: 0.6;
+
+}
+
+/* container seccion top 5 */
+.container-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    padding: 0% 8%;
+    margin-bottom: 4%;
+}
+.container-title h4 {
+    font-size: 24px;
+}
+.container-top-5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%;
+    align-items: center;
+}
+.container-recomendados-top-5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.popular {
+    width: 90%;
+    height: 200px;
+    margin-bottom: 8%;
+    display: flex;
+    gap: 15px;
+}
+.popular .oferta {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+.oferta img {
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    object-fit: cover;
+}
+.descripcion-oferta {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.descripcion-oferta p {
+    font-size: 12px;
+    margin-bottom: 7%;
+    margin-top: 6%;
+    text-align: left;
+    opacity: 0.6;
+}
+.descripcion-oferta h5 {
+    font-size: 14px;
+}
+.precio-top {
+    margin-top: auto;
+}
+
+/* Recurrentes */
+.container-carrusel-recurrentes {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    padding: 2% 5%;
+    gap: 20px;
+}
+.recurrente {
+    min-width: 340px;
+    max-width: 340px;
+    height: 200px;
+    display: flex;
+    gap: 15px;
+}
+.recurrente .oferta {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+/* Bebidas */
+.container-carrusel-bebidas {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0% 5%;
+    gap: 20px;
+}
+.separador-menus {
+    width: 90%;
+    margin: var(--spacing-md) auto;
+    height: 2px;
+    background-color: rgba(105, 105, 105, 0.116);
+}
+.bebida {
+    min-width: 200px;
+    max-width: 200px;
+    height: auto;
+}
+.ofertaBebida {
+    width: 200px;
+    height: auto;
+}
+.ofertaBebida img {
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
+    object-fit: cover;
+}
+.container-info-bebidas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 5%;
+    margin-top: 2%;
+}
+.container-info-bebidas h5 {
+    font-size: 14px;
+}
+.container-info-bebidas p  {
+    opacity: 0.6;
+    font-size: 14px;
+}
+.descripcion-bebidas-antojos {
+    padding-left: 5%;
+    opacity: 0.6;
+    font-size: 12px;
+    margin-bottom: 15%;
+}
+/* Container contacto y como llegar */
+.container-contacto {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 5%; 
+    padding: 0% 5%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* O el color que prefieras */
+    z-index: 1000; /* Para asegurar que esté por encima de otros elementos */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra sutil */
+}
+
+.container-contacto .contacto {
+    width: 48%;
+    height: 65%;
+    background: #00cd70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    border: none;
+    color: white;
+    font-size: 14px;
+}
+.container-contacto button:active {
+    background-color: brown;
+}
+.container-contacto button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 3%;
+}
+.como-llegar {
+    width: 48%;
+    height: 65%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    border: none;
+    color: var(--red-botons);
+    font-size: 14px;
+}
+.container-contacto-res-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    justify-content: center;
+    background: white; /* Fondo blanco para que no se vea el contenido detrás */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); /* Sombra sutil en la parte superior */
+    z-index: 1000;
+  }
+  
+
+  @media (min-width: 768px) {
+    .container-caracteristicas {
+        margin-bottom: 0;
+        margin-top: 2%;
+        width: 100%;
+    }
+    .container-contacto-res-bar {
+        position: relative;
+        display: flex;
+        gap: var(--spacing-md);
+        padding: 0;
+        justify-content: center;
+        background: white; /* Fondo blanco para que no se vea el contenido detrás */
+        box-shadow: 0 0px 0px rgba(0,0,0,0.1); /* Sombra sutil en la parte superior */
+        z-index: 1000;
+    }
+    .container-title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: first baseline;
+        align-items: center;
+        padding: 0% 8%;
+        margin-bottom: 1%;
+    }
+    .container-top-5 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+    }
+    .container-carrusel-bebidas {
+        padding: 0% 0%;
+        gap: 0 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        justify-content: center;
+    }
+    .container-title {
+        padding: 0% 0%;
+    }
+    .container-recomendados-top-5 {
+        flex-direction: row;
+        
+    }
+    .bebida {
+        min-width: 130px;
+        max-width: 130px;
+        height: auto;
+    }
+    .ofertaBebida {
+        width: 130px;
+        height: auto;
+    }
+    .ofertaBebida img {
+        width: 130px;
+        height: 130px;
+        border-radius: 1em;
+        object-fit: cover;
+    }
+    .container-info-bebidas {
+        flex-direction: column;
+        gap: 0;
+    }
+    .popular {
+        margin-bottom: 3%;
+        height: auto;
+    }
+    .popular .oferta {
+        width: 150px;
+        height: 150px;
+    }
+    .oferta img {
+        width: 150px;
+        height: 150px;
+    }
+    .precio-top {
+        margin-top: 0;
+    }
+    .separador-menus {
+        width: 80%;
+    }
+    .container-carrusel-recurrentes {
+        padding: 0% 0%;
+        gap: 0 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .recurrente {
+        min-width: auto;
+        max-width: 100%;
+        height: auto;
+        gap: 5%;
+    }
+    .recurrente .oferta {
+        width: 150px;
+    }
+  }

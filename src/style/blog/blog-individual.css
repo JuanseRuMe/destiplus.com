@@ -1,0 +1,426 @@
+/* src/style/blog/blog-individual.css */
+
+:root {
+  --primary-color: #00cd70;  /* Verde Destiplus/Rappi */
+  --secondary-color: #00a050; /* Un verde más oscuro para variaciones */
+  --accent-color: #ff7043; /* Un color de acento (naranja Rappi, opcional) */
+  --text-dark: #263238;    /* Un gris oscuro profundo para texto principal (legibilidad) */
+  --text-medium: #546e7a;   /* Gris medio para texto secundario */
+  --text-light: #78909c;    /* Gris claro para metadatos, captions */
+  --background-light: #ffffff;
+  --background-grey: #f4f6f8; /* Un gris muy claro, estilo app moderna */
+  --border-light: #e0e0e0;    /* Bordes sutiles */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;          /* Bordes más redondeados, estilo moderno */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 12px 30px rgba(0,0,0,0.12);
+
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 0.75rem;  /* 12px */
+  --spacing-md: 1.25rem;  /* 20px - Más espacio que antes */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-xxl: 4.5rem;  /* 72px */
+
+  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+
+  --font-size-xs: 0.75rem;  /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem;     /* 16px - Base para párrafos */
+  --font-size-lg: 1.25rem;  /* 20px */
+  --font-size-xl: 1.75rem;  /* 28px - Para h2 */
+  --font-size-xxl: 2.5rem;  /* 40px - Para h1 (título del artículo) */
+  --font-size-hero: 3.25rem; /* 52px - Para el título en el hero header */
+} 
+
+
+
+/* --- Contenedor General de la Página del Artículo --- */
+.article-page-container {
+  background-color: var(--background-light, #fff);
+}
+
+/* --- Cabecera Impactante del Artículo --- */
+.article-header {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* Un poco menos alto que antes para no ser abrumador */
+  max-height: 550px;
+  display: flex;
+  flex-direction: column; /* Alinear contenido verticalmente */
+  align-items: center;
+  justify-content: flex-end; /* Alinear contenido hacia abajo */
+  text-align: center;
+  overflow: hidden;
+  padding: var(--spacing-xl, 3rem) var(--spacing-md, 1.25rem) var(--spacing-lg, 2rem); /* Más padding inferior */
+  box-sizing: border-box;
+}
+
+.article-header-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.article-header-image {
+  filter: brightness(0.75); /* Un poco más oscuro para contraste */
+}
+
+.article-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.75) 100%);
+  z-index: 1;
+}
+
+.article-header-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 750px; /* Un poco más ancho para el título */
+  animation: fadeInHeaderContent 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+@keyframes fadeInHeaderContent {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.article-category-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15); /* Fondo sutil para el badge */
+  color: var(--primary-color, #00cd70); /* Texto en color primario */
+  border: 1px solid var(--primary-color, #00cd70);
+  padding: var(--spacing-xs, 0.5rem) var(--spacing-md, 1.25rem);
+  border-radius: var(--radius-lg, 20px); /* Más redondeado */
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md, 1.25rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: clamp(var(--font-size-xl, 1.75rem), 6vw, var(--font-size-hero, 3.25rem));
+  font-weight: 700; /* Bold, pero no extra-bold para mantener limpieza */
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 1.25rem);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.article-meta {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm, 0.75rem);
+  letter-spacing: 0.3px;
+}
+.article-meta span:not(:last-child)::after { /* Separador más sutil */
+  content: '•';
+  margin-left: var(--spacing-sm, 0.75rem);
+  opacity: 0.7;
+}
+
+
+/* --- Cuerpo Principal del Artículo --- */
+.article-body {
+  padding: var(--spacing-xl, 3rem) var(--spacing-md, 1.25rem); /* Espacio generoso alrededor */
+  background-color: var(--background-light, #fff);
+}
+
+.main-content-column {
+  max-width: 700px; /* Ancho de lectura óptimo, estilo blog moderno */
+  margin: 0 auto;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: var(--font-size-md, 1rem);
+  line-height: 1.75; /* Buen interlineado */
+  color: var(--text-dark, #263238);
+}
+
+.article-paragraph {
+  margin-bottom: var(--spacing-md, 1.25rem);
+  color: var(--text-dark, #263238); /* Asegurar buen contraste */
+}
+.article-paragraph a { /* Estilo para enlaces dentro del contenido */
+    color: var(--primary-color, #00cd70);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.article-paragraph a:hover {
+    border-bottom-color: var(--primary-color, #00cd70);
+}
+
+
+.article-heading-2, .article-heading-3, .article-heading-4, .article-heading-5, .article-heading-6 {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  color: var(--text-dark, #263238);
+  margin-top: var(--spacing-xl, 3rem);
+  margin-bottom: var(--spacing-sm, 0.75rem); /* Menos espacio después del título, más antes */
+  line-height: 1.3;
+  font-weight: 600; /* Ligeramente menos bold que el título principal */
+}
+.article-heading-2 {
+  font-size: var(--font-size-xl, 1.75rem);
+  padding-bottom: var(--spacing-xs, 0.5rem);
+  /* border-bottom: 2px solid var(--primary-color, #00cd70); */ /* Opcional: línea bajo el h2 */
+}
+.article-heading-3 {
+  font-size: var(--font-size-lg, 1.25rem);
+  color: var(--text-medium, #546e7a); /* Color más suave para h3 */
+}
+
+.article-list {
+  margin: var(--spacing-md, 1.25rem) 0;
+  padding-left: var(--spacing-md, 1.25rem); /* Solo un poco de indentación */
+  list-style: none; /* Quitar bullets por defecto para personalizarlos */
+}
+.article-list li {
+  margin-bottom: var(--spacing-sm, 0.75rem);
+  padding-left: var(--spacing-md, 1.25rem);
+  position: relative;
+}
+.article-list li::before {
+  content: ''; /* Usar un pseudo-elemento para el bullet */
+  position: absolute;
+  left: 0;
+  top: calc(0.875em / 2); /* Centrar verticalmente (aprox) */
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color, #00cd70);
+  border-radius: 50%;
+}
+
+.article-blockquote {
+  border-left: 3px solid var(--primary-color, #00cd70);
+  margin: var(--spacing-lg, 2rem) 0;
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1.25rem);
+  background-color: var(--background-grey, #f4f6f8);
+  color: var(--text-medium, #546e7a);
+  font-size: var(--font-size-md, 1rem); /* Ligeramente más grande o igual al párrafo */
+  font-style: normal; /* No itálica por defecto, a menos que el contenido lo sea */
+}
+.article-blockquote p {
+  margin: 0;
+}
+.article-blockquote cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--text-light, #78909c);
+  margin-top: var(--spacing-sm, 0.75rem);
+}
+
+.article-inline-image-figure {
+  margin: var(--spacing-lg, 2rem) calc(-1 * var(--spacing-md, 1.25rem)); /* Para que la imagen pueda ser full-width dentro de la columna */
+  text-align: center;
+  padding: 0 5%;
+}
+.article-inline-image {
+  border-radius: var(--radius-md, 12px); /* Bordes más suaves */
+  max-width: 100%; /* Para que no se desborde del figure */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-soft);
+}
+.article-image-caption {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--text-light, #78909c);
+  text-align: center;
+  margin-top: var(--spacing-sm, 0.75rem);
+  padding: 0 var(--spacing-md, 1.25rem);
+}
+
+/* --- Sección de Compartir (Estilo Rappi: limpio, con iconos) --- */
+.share-section {
+  padding: 5% 4%;
+  text-align: center;
+  margin-bottom: 10%;
+  max-width: 700px; /* Coincide con main-content-column */
+  border-top: 1px solid var(--border-light, #e0e0e0);
+  /* border-bottom: 1px solid var(--border-light, #e0e0e0); Quitar borde inferior para flujo más suave a relacionados */
+}
+.share-section h3 {
+  font-size: var(--font-size-md, 1rem);
+  color: var(--text-medium, #546e7a);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md, 1.25rem);
+  font-weight: 500; /* Menos bold para un look más app */
+}
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm, 0.75rem);
+  flex-wrap: wrap;
+}
+.share-buttons a, .share-buttons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Centrar icono y texto si el texto es corto */
+  gap: var(--spacing-xs, 0.5rem);
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1.25rem);
+  border-radius: var(--radius-lg, 20px); /* Más redondeado */
+  text-decoration: none;
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--border-light, #e0e0e0); /* Borde sutil por defecto */
+  background-color: var(--background-light, #fff);
+  color: var(--text-medium, #546e7a);
+  cursor: pointer;
+}
+.share-buttons a:hover, .share-buttons button:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color, #00cd70); /* Borde verde al hover */
+  color: var(--primary-color, #00cd70); /* Texto verde al hover */
+  /* background-color: transparent; */ /* Fondo transparente al hover */
+}
+.share-buttons a i, .share-buttons button i {
+  font-size: 1.1rem; /* Tamaño del icono */
+  /* El color del icono se hereda del color del texto del botón */
+}
+/* Quitar colores específicos de fondo para botones de compartir, para un look más cohesivo y limpio */
+/* Si quieres mantenerlos, descomenta y ajusta: */
+
+.share-button-facebook { border-color: #1877F2; color: #1877F2; }
+.share-button-facebook:hover { background-color: #1877F2; color: white; }
+.share-button-twitter { border-color: #1DA1F2; color: #1DA1F2; }
+.share-button-twitter:hover { background-color: #1DA1F2; color: white; }
+.share-button-whatsapp { border-color: #25D366; color: #25D366; }
+.share-button-whatsapp:hover { background-color: #25D366; color: white; }
+.share-button-copy-link { border-color: var(--text-light); color: var(--text-light); }
+.share-button-copy-link:hover { background-color: var(--text-light); color: white; }
+
+
+
+/* --- Artículos Relacionados (Tarjetas limpias, estilo app) --- */
+.related-articles-section {
+  background-color: var(--background-grey, #f4f6f8); /* Fondo de sección diferente */
+  padding: var(--spacing-xl, 3rem) var(--spacing-md, 1.25rem);
+  margin: var(--spacing-xl, 3rem) calc(-1 * var(--spacing-md, 1.25rem)) 0; /* Ocupa ancho completo si .article-body tiene padding */
+}
+.related-articles-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: var(--font-size-xl, 1.75rem);
+  font-weight: 600;
+  color: var(--text-dark, #263238);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg, 2rem);
+  padding: 0 5%;
+}
+/* Quitar la línea ::after del related-articles-title para un look más limpio */
+
+.related-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta minmax según necesites */
+  gap: var(--spacing-md, 1.25rem); /* Limita el ancho de la grilla */
+  margin: 0 auto; /* Centra la grilla */
+  padding: 0 6%;
+}
+.related-article-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-light, #fff);
+  border-radius: var(--radius-md, 12px); /* Bordes más suaves */
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; 
+}
+.related-article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+.related-article-image {
+  width: 100%;
+  height: 180px; /* Altura consistente para las imágenes */
+  display: block;
+  object-fit: cover; /* CldImage ya lo maneja si se usa fill y crop */
+}
+.related-article-card-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: var(--font-size-md, 1rem); /* Tamaño base para títulos de tarjeta */
+  font-weight: 600;
+  color: var(--text-dark, #263238);
+  padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1.25rem) var(--spacing-md, 1.25rem);
+  margin: 0;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+  .article-header {
+    min-height: 50vh;
+    padding: var(--spacing-lg, 2rem) var(--spacing-sm, 0.75rem) var(--spacing-md, 1.25rem);
+  }
+  .article-title {
+    font-size: clamp(var(--font-size-lg, 1.25rem), 7vw, var(--font-size-xxl, 2.5rem));
+  }
+  .main-content-column {
+    font-size: calc(var(--font-size-md, 1rem) * 0.95); /* Ligeramente más pequeño en móvil */
+  }
+  .article-heading-2 {
+    font-size: var(--font-size-lg, 1.25rem);
+  }
+  .article-heading-3 {
+    font-size: var(--font-size-md, 1rem);
+  }
+  .related-articles-section {
+     margin-left: calc(-1 * var(--spacing-sm, 0.75rem)); /* Ajusta para el padding de article-body */
+     margin-right: calc(-1 * var(--spacing-sm, 0.75rem));
+     padding-left: var(--spacing-sm, 0.75rem);
+     padding-right: var(--spacing-sm, 0.75rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .article-header {
+    min-height: 45vh;
+    max-height: 400px;
+  }
+  .article-meta {
+    font-size: var(--font-size-xs, 0.75rem);
+    gap: var(--spacing-xs, 0.5rem);
+  }
+  .article-meta span:not(:last-child)::after {
+    margin-left: var(--spacing-xs, 0.5rem);
+  }
+  .main-content-column {
+    line-height: 1.7;
+  }
+  .share-buttons a, .share-buttons button {
+    width: calc(50% - (var(--spacing-sm, 0.75rem) / 2)); /* Dos botones por fila */
+    justify-content: center;
+    padding: var(--spacing-sm, 0.75rem);
+    font-size: var(--font-size-xs, 0.75rem);
+  }
+  .share-buttons a i, .share-buttons button i {
+    font-size: 1rem;
+  }
+  .related-articles-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: var(--spacing-sm, 0.75rem);
+  }
+}

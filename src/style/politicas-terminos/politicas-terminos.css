@@ -1,0 +1,157 @@
+/* src/styles/privacy-policy.css */
+
+:root {
+    --primary-color: #00cd70;
+    --secondary-color: #00a050;
+    --accent-color: #ff7043;
+    --text-dark: #263238;
+    --text-medium: #546e7a;
+    --text-light: #78909c;
+    --background-light: #ffffff;
+    --background-grey: #f4f6f8;
+    --border-light: #e0e0e0;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-strong: 0 12px 30px rgba(0,0,0,0.12);
+  
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 0.75rem;  /* 12px */
+    --spacing-md: 1.25rem;  /* 20px */
+    --spacing-lg: 2rem;     /* 32px */
+    --spacing-xl: 3rem;     /* 48px */
+    --spacing-xxl: 4.5rem;  /* 72px */
+  
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+  
+    --font-size-xs: 0.75rem;   /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-md: 1rem;     /* 16px - Base para párrafos */
+    --font-size-lg: 1.25rem;  /* 20px */
+    --font-size-xl: 1.75rem;  /* 28px - Para h2 */
+    --font-size-xxl: 2.5rem;  /* 40px - Para h1 */
+  }
+  
+  /* --- Contenedor General de la Página --- */
+  .privacy-policy-page-container {
+    background-color: var(--background-light, #fff);
+    padding-top: var(--spacing-xl, 3rem); /* Espacio superior */
+    padding-bottom: var(--spacing-xl, 3rem); /* Espacio inferior */
+    margin-top: 12%;
+  }
+  
+  /* --- Cabecera Sencilla de la Página --- */
+  .privacy-policy-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg, 2rem);
+    padding: 0 var(--spacing-md, 1.25rem);
+  }
+  
+  .privacy-policy-main-title {
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    font-size: var(--font-size-xxl, 2.5rem);
+    font-weight: 700;
+    color: var(--text-dark, #263238);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm, 0.75rem);
+  }
+  
+  .privacy-policy-last-updated {
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--text-medium, #546e7a);
+    margin-top: var(--spacing-xs, 0.5rem);
+  }
+  
+  /* --- Cuerpo Principal del Contenido --- */
+  .privacy-policy-body {
+    padding: 0 var(--spacing-md, 1.25rem); /* Espacio lateral */
+    background-color: var(--background-light, #fff);
+  }
+  
+  .privacy-policy-content {
+    max-width: 800px; /* Ancho de lectura óptimo para documentos */
+    margin: 0 auto;
+    font-family: var(--font-body, 'Poppins', sans-serif);
+    font-size: var(--font-size-md, 1rem);
+    line-height: 1.75;
+    color: var(--text-dark, #263238);
+  }
+  
+  .privacy-policy-paragraph {
+    margin-bottom: var(--spacing-md, 1.25rem);
+    color: var(--text-dark, #263238);
+  }
+  .privacy-policy-paragraph a {
+    color: var(--primary-color, #00cd70);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .privacy-policy-paragraph a:hover {
+    border-bottom-color: var(--primary-color, #00cd70);
+  }
+  
+  .privacy-policy-heading-2,
+  .privacy-policy-heading-3,
+  .privacy-policy-heading-4 {
+    font-family: var(--font-heading, 'Poppins', sans-serif);
+    color: var(--text-dark, #263238);
+    margin-top: var(--spacing-lg, 2rem); /* Más espacio antes del título */
+    margin-bottom: var(--spacing-sm, 0.75rem);
+    line-height: 1.3;
+    font-weight: 600;
+  }
+  .privacy-policy-heading-2 {
+    font-size: var(--font-size-xl, 1.75rem);
+    padding-bottom: var(--spacing-xs, 0.5rem);
+    border-bottom: 1px solid var(--border-light, #e0e0e0); /* Línea sutil bajo h2 */
+  }
+  .privacy-policy-heading-3 {
+    font-size: var(--font-size-lg, 1.25rem);
+    color: var(--text-medium, #546e7a); /* Color más suave para h3 */
+  }
+  .privacy-policy-heading-4 {
+      font-size: var(--font-size-md, 1rem);
+      font-weight: 700; /* H4 un poco más fuerte que el texto normal */
+      color: var(--text-medium, #546e7a);
+  }
+  
+  
+  .privacy-policy-list {
+    margin: var(--spacing-md, 1.25rem) 0;
+    padding-left: var(--spacing-md, 1.25rem);
+    list-style: none;
+  }
+  .privacy-policy-list li {
+    margin-bottom: var(--spacing-sm, 0.75rem);
+    padding-left: var(--spacing-md, 1.25rem);
+    position: relative;
+  }
+  .privacy-policy-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(0.875em / 2); /* Centrar verticalmente (aprox) */
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color, #00cd70);
+    border-radius: 50%;
+  }
+  
+  .privacy-policy-blockquote {
+    border-left: 3px solid var(--primary-color, #00cd70);
+    margin: var(--spacing-lg, 2rem) 0;
+    padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1.25rem);
+    background-color: var(--background-grey, #f4f6f8);
+    color: var(--text-medium, #546e7a);
+    font-size: var(--font-size-md, 1rem);
+    font-style: normal;
+  }
+  .privacy-policy-blockquote p {
+    margin: 0;
+  }

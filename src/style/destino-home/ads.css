@@ -1,0 +1,86 @@
+/* Estilos para el AdSlider */
+.ad-slider-container {
+  /* === CAMBIADO === */
+  width: 100%; /* Ancho del 80% del contenedor padre */
+  /* max-width: 700px; */ /* Quitamos o comentamos el max-width si queremos que siempre sea 80% */
+  margin: 30px auto; /* Mantiene el centrado y espacio vertical */
+  padding: 0; /* Quitamos padding lateral si el 80% debe ser exacto */
+  box-sizing: border-box;
+  margin-top: 0;
+}
+  
+.ad-swiper {
+    height: auto;
+    width: 100%;
+    overflow: hidden; /* Asegura que el contenido no se salga */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 12px;
+}
+  
+.ad-slide {
+    /* Estilos para cada slide individual si necesitas */
+    background-color: #f0f0f0; /* Color de fondo mientras carga la imagen */
+}
+  
+.ad-slide-content {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  position: relative; /* Necesario para CldImage con fill */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Default para móvil */
+}
+  
+  
+.ad-slide-image {
+    display: block; /* Evita espacio extra debajo de la imagen */
+    width: 100%; /* Hace la imagen responsiva */
+    height: 100%; /* Mantiene la proporción de la imagen */
+    /* Opcional: definir una altura o aspect-ratio si todas las imágenes deben tener el mismo tamaño */
+    /* aspect-ratio: 16 / 6; */ /* Ejemplo de proporción panorámica */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+  
+  /* Estilos para la paginación de Swiper (puntos) */
+.ad-swiper .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.781); /* Color de los puntos inactivos */
+    opacity: 0.7;
+    width: 8px;
+    height: 8px;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+  
+.ad-swiper .swiper-pagination-bullet-active {
+    background-color: #ffffff; /* Color del punto activo (puedes usar tu color principal) */
+    opacity: 1;
+}
+  
+  /* Opcional: Espacio para la paginación si queda muy pegada */
+.ad-swiper .swiper-pagination {
+     bottom: 8px !important; /* Ajusta la posición vertical de los puntos */
+}
+
+@media (min-width: 768px) {
+  /* ... (otros estilos flex para .category-ads) ... */
+
+  .ad-slider-container {
+    display: none;
+    flex: 1 1 40%; /* O el flex-basis que te funcione */
+    max-width: 500px; /* Ajusta según veas necesario */
+    margin: 0;
+    align-self: center; /* Intenta centrar verticalmente el AdSlider si es más corto */
+  }
+
+  .ad-slide-content { /* El div que contiene CldImage */
+    aspect-ratio: 21 / 9; /* Más panorámico, ej: 2.33:1. Prueba con 18/9 (2:1) o 20/9 */
+    /* O incluso podrías definir una max-height si el aspect-ratio no es suficiente */
+    /* max-height: 300px; */ /* Descomenta y ajusta si es necesario */
+    border-radius: var(--radius-lg, 16px); /* Asegúrate que el contenido también tenga el radio */
+    overflow: hidden; /* Para que la imagen respete el radio */
+  }
+
+  .category-highlight-section {
+    flex: 1 1 55%;
+    /* ... */
+  }
+}
